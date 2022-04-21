@@ -1,0 +1,18 @@
+.intro {
+  display: flex;
+}
+.aside-wrap {
+  padding: 2em;
+  background-color: lightpink;
+  width: 30%;
+}
+.content-wrap {
+  background-color: lightblue;
+  width: 70%;
+  padding: 2em;
+}
+.length,
+.time,
+.level {
+  display: inline-block;
+}

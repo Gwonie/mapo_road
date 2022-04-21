@@ -1,0 +1,95 @@
+.main-course {
+  width: 100%;
+}
+.wrap-content1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.course-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: lightgreen;
+}
+.start {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: lightcoral;
+}
+
+.wrap-content2 {
+  display: flex;
+}
+.left-content {
+  /* 수정할만한거 */
+  padding-top: 8rem;
+  width: 50%;
+  background-color: lightcyan;
+}
+.vertical-line {
+  width: 2px;
+  background-color: gray;
+}
+.right-content {
+  width: 50%;
+  background-color: lightgoldenrodyellow;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  /* background-color: lightgreen; */
+  position: relative;
+  padding-bottom: 2rem;
+}
+.left-content .list-item {
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+}
+.right-content .list-item {
+  padding-left: 1.5rem;
+}
+.list-item img {
+  width: 200px;
+  height: 200px;
+  background-color: lightskyblue;
+  margin: 0.5rem;
+}
+.list-item .number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: lightsalmon;
+}
+.left-content .list-item .number {
+  position: absolute;
+  right: -15.5px;
+}
+.right-content .list-item .number {
+  position: absolute;
+  left: -15.5px;
+}
+.wrap-content3 {
+  display: flex;
+  justify-content: center;
+}
+.end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: lightcoral;
+}
