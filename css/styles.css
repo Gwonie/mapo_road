@@ -3,10 +3,15 @@
 @import url("header.css");
 @import url("intro.css");
 @import url("main-course.css");
+@import url("recom.css");
+@import url("footer.css");
 
 * {
   font-family: "Noto Sans KR", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+html {
+  background-color: #eee;
 }

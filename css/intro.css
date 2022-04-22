@@ -1,18 +1,40 @@
 .intro {
   display: flex;
+  padding: 0 10%;
+  /* background-color: lightblue; */
 }
 .aside-wrap {
-  padding: 2em;
-  background-color: lightpink;
+  padding: 4em 2em 4em 4em;
+  /* background-color: #eee; */
   width: 30%;
 }
-.content-wrap {
-  background-color: lightblue;
-  width: 70%;
-  padding: 2em;
+
+.aside-wrap .title {
+  /* background-color: lime; */
+  margin-top: 0.7em;
 }
+
 .length,
 .time,
 .level {
   display: inline-block;
+}
+
+.content-wrap {
+  /* background-color: lightcyan; */
+  width: 70%;
+  padding: 4em 4em 4em 2em;
+}
+
+.content-wrap .title {
+  display: inline-block;
+  /* background-color: aqua; */
+  margin-bottom: 0.4em;
+}
+
+.content-wrap .line {
+  width: 65px;
+  height: 2px;
+  background-color: gray;
+  margin-bottom: 0.6em;
 }

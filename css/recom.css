@@ -1,0 +1,18 @@
+.recom {
+  padding: 5em 0;
+  /* background-color: lightsalmon; */
+  text-align: center;
+}
+.recom-images {
+  /* background-color: lightgoldenrodyellow; */
+  margin: 2em auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center center;
+}
+
+.recom img {
+  width: 250px;
+  height: 225px;
+  /* background-color: white; */
+}

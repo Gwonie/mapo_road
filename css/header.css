@@ -1,16 +1,16 @@
 header {
-  height: 50vh;
-  background-color: lightgreen;
+  height: 70vh;
+  /* background-color: lightgreen; */
   text-align: center;
 }
 nav {
   display: flex;
   width: 100%;
-  height: 12%;
-  background-color: #eee;
+  height: 48px;
+  /* background-color: #eee; */
 }
 .logo {
-  background-color: lightblue;
+  /* background-color: lightblue; */
   width: 20%;
   display: flex;
   justify-content: center;
@@ -21,7 +21,7 @@ nav {
 }
 nav ul {
   list-style: none;
-  background-color: lightpink;
+  /* background-color: lightpink; */
   width: 50%;
   display: flex;
   justify-content: space-evenly;
@@ -30,15 +30,16 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: black;
+  font-weight: 600;
 }
-/* .header-img {
-  background-image: url(../images/header-img.JPG);
+.header-img {
+  background-image: url(../images/header-img1.JPG);
   width: 100%;
   height: 85%;
-  background-size: ;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-} */
-.header-img {
-  height: 88%;
 }
+/* .header-img {
+  height: 335px;
+} */
