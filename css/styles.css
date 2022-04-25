@@ -5,6 +5,7 @@
 @import url("main-course.css");
 @import url("recom.css");
 @import url("footer.css");
+@import url("detail.css");
 
 * {
   font-family: "Noto Sans KR", sans-serif;
