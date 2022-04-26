@@ -1,9 +1,18 @@
+let firstImg = document.querySelector(".first-img");
+
 let slideImg = ["sungsan_park.jpg", "sungsan_park2.jpg"];
 let detailImg = document.querySelector(".detail-img");
 let bgImg = document.querySelector(".bg-img");
 let imgPath = "../images/";
 
+let detail = document.querySelector(".detail");
+let closeBtn = document.querySelector(".close-btn");
+
 let idx = 0;
+
+firstImg.addEventListener("click", () => {
+  detail.style.display = "block";
+});
 
 function plusSlides(n) {
   showSlides((idx += n));
@@ -23,3 +32,7 @@ function showSlides(n) {
 }
 
 showSlides(idx);
+
+closeBtn.addEventListener("click", () => {
+  detail.style.display = "none";
+});
