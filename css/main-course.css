@@ -1,7 +1,6 @@
 .main-course {
-  width: 100%;
-  padding: 4em 0;
-  /* background-color: lightgoldenrodyellow; */
+  padding: 60px 0;
+  background-color: var(--second-color);
 }
 .wrap-content1 {
   display: flex;
@@ -13,19 +12,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 100%;
-  background-color: lightgrey;
+  background-color: var(--fifth-color);
+  color: var(--first-color);
 }
-.start {
+.start,
+.end {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
-  background-color: lightgrey;
+  background-color: var(--fifth-color);
+  color: var(--first-color);
 }
 
 .course-name,
@@ -40,8 +42,8 @@
 }
 .left-content {
   width: 50%;
-  /* background-color: lightcyan; */
-  /* 수정 주의 */
+  /* background-color: lightgreen; */
+  /* 수정 구간 */
   margin-top: 120px;
 }
 .vertical-line {
@@ -50,57 +52,48 @@
 }
 .right-content {
   width: 50%;
-  /* background-color: lightseagreen; */
+  /* background-color: lightpink; */
 }
 
 .list-item {
   display: flex;
   align-items: center;
-  /* background-color: lightpink; */
   /* border: 1px solid black; */
   position: relative;
-  min-height: 250px;
+  min-height: 260px;
 }
 .left-content .list-item {
   justify-content: flex-end;
-  padding-right: 1.5rem;
+  padding-right: 40px;
 }
 .right-content .list-item {
-  padding-left: 1.5rem;
+  padding-left: 40px;
 }
 .list-item img {
-  width: 250px;
-  height: 225px;
-  /* background-color: lightskyblue; */
-  margin: 0.5rem;
+  width: 300px;
+  height: 250px;
+  background-color: lightskyblue;
+  margin: 10px;
 }
 .list-item .number {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
-  background-color: lightgrey;
+  background-color: var(--fourth-color);
+  color: var(--first-color);
 }
 .left-content .list-item .number {
   position: absolute;
-  right: -15.5px;
+  right: -20.5px;
 }
 .right-content .list-item .number {
   position: absolute;
-  left: -15.5px;
+  left: -20.5px;
 }
 .wrap-content3 {
   display: flex;
   justify-content: center;
-}
-.end {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  background-color: lightgrey;
 }

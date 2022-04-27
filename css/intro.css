@@ -1,17 +1,18 @@
 .intro {
   display: flex;
-  padding: 0 10%;
-  /* background-color: lightblue; */
+  padding: 0 150px;
+  background-color: var(--first-color);
 }
 .aside-wrap {
-  padding: 4em 2em 4em 4em;
-  /* background-color: #eee; */
+  padding: 60px 30px 60px 60px;
+  /* background-color: lightblue; */
   width: 30%;
 }
 
 .aside-wrap .title {
-  /* background-color: lime; */
-  margin-top: 0.7em;
+  background-color: var(--fourth-color);
+  color: var(--first-color);
+  margin-top: 14px;
 }
 
 .length,
@@ -21,20 +22,20 @@
 }
 
 .content-wrap {
-  /* background-color: lightcyan; */
+  /* background-color: lightgoldenrodyellow; */
   width: 70%;
-  padding: 4em 4em 4em 2em;
+  padding: 60px 60px 60px 30px;
 }
 
 .content-wrap .title {
   display: inline-block;
-  /* background-color: aqua; */
-  margin-bottom: 0.4em;
+  /* background-color: lime; */
+  margin-bottom: 14px;
 }
 
-.content-wrap .line {
-  width: 65px;
+.content-wrap .horizantal-line {
+  width: 85px;
   height: 2px;
-  background-color: gray;
-  margin-bottom: 0.6em;
+  background-color: var(--fourth-color);
+  margin-bottom: 14px;
 }

@@ -1,6 +1,7 @@
 footer {
-  padding: 4em 0;
+  padding: 60px 0;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  background-color: var(--fourth-color);
 }
