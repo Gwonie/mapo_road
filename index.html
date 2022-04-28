@@ -16,19 +16,19 @@
         </div>
         <ul>
           <li>
-            <a href="">코스소개</a>
+            <a href="#intro">코스소개</a>
           </li>
           <li>
-            <a href="">주요코스</a>
+            <a href="#main-course">주요코스</a>
           </li>
           <li>
-            <a href="">추천스팟</a>
+            <a href="#recom">추천스팟</a>
           </li>
         </ul>
       </nav>
       <div class="header-img"></div>
     </header>
-    <div class="intro">
+    <div id="intro" class="intro">
       <div class="aside-wrap">
         <h2>Course7</h2>
         <h2>성미산 동네길</h2>
@@ -70,7 +70,7 @@
         </p>
       </div>
     </div>
-    <div class="main-course">
+    <div id="main-course" class="main-course">
       <div class="wrap-content1">
         <h1>주요코스</h1>
         <h2>🏃‍♂️</h2>
@@ -125,17 +125,22 @@
         <div class="end">도착</div>
       </div>
     </div>
-    <div class="recom">
+    <div id="recom" class="recom">
       <h1>추천스팟</h1>
       <h2>📍</h2>
       <div class="recom-images">
         <img
-          class="first-img"
+          class="recom-img"
           src="images/sungsan_park2.jpg"
-          alt=""
-          style="cursor: pointer"
+          alt="성산근린공원"
+          onclick="showDetailHandler(event)"
         />
-        <img src="images/month_sculpture.jpg" alt="" />
+        <img
+          class="recom-img"
+          src="images/month_sculpture.jpg"
+          alt="먼스스컬프쳐"
+          onclick="showDetailHandler(event)"
+        />
         <img src="images/richemont.jpg" alt="" />
         <img src="images/museum2.jpg" alt="" />
         <img src="images/beatroad.jpg" alt="" />
@@ -143,32 +148,27 @@
         <img src="images/danginli.jpg" alt="" />
       </div>
     </div>
-    <div class="detail">
-      <div class="bg-img">
-        <img src="images/bg_effect.png" alt="" />
-      </div>
-      <div class="detail-content">
-        <img class="close-btn" src="images/close_btn.svg" alt="" />
-        <div class="title">
-          <h3 class="title-content">성미산 한 바퀴</h3>
-          <br />
-          <h2 class="title-content">성산근린공원</h2>
+    <div class="detail" id="detail1">
+      <div class="detail-wrapper">
+        <div class="bg-img">
+          <img src="images/bg_effect.png" alt="" />
         </div>
-        <div class="content">
-          <div class="slideshow-container">
-            <img class="detail-img" alt="" />
-            <a class="prev" onclick="plusSlides(-1)"><</a>
-            <a class="next" onclick="plusSlides(1)">></a>
+        <div class="detail-content">
+          <img class="close-btn" src="images/close_btn.svg" alt="" />
+          <div class="title">
+            <h3 class="title-content" id="title1"></h3>
+            <br />
+            <h2 class="title-content" id="title2"></h2>
           </div>
-          <div class="vertical-line"></div>
-          <p class="detail-info">
-            ‘성미’의 정확한 한자 명칭은 성산(城山). 성산동의 지명도 여기서
-            유래되었다. 100m가 채 되지 않는 완만한 높이의 성산은 주민들의 쉼터
-            및 산책코스로 인기가 높다. 과거 성산2동까지 뻗어 있었던 성산은
-            일제시대 당시 개발로 인해 지금의 성산1동에 일부만 남았고 그곳에
-            공원이 조성됐다. 둘레길, 운동기구, 휴식공간 등이 잘 갖춰진
-            성산근린공원은 언제 가도 산책코스로 손색이 없다.
-          </p>
+          <div class="content">
+            <div class="slideshow-container">
+              <img class="detail-img" alt="" />
+              <a class="prev" onclick="plusSlides(-1)"><</a>
+              <a class="next" onclick="plusSlides(1)">></a>
+            </div>
+            <div class="vertical-line"></div>
+            <p class="detail-info" id="detail-info"></p>
+          </div>
         </div>
       </div>
     </div>

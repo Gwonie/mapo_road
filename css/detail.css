@@ -1,39 +1,47 @@
-.detail {
+.detail-wrapper {
   display: none;
   position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background-color: #eee;
-  overflow: auto;
+  width: 1000px;
+  height: 800px;
+  top: 50px;
+  left: 450px;
+  background-color: var(--second-color);
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
 .close-btn {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 3em;
-  background-color: white;
+  margin: 30px;
+  background-color: var(--second-color);
   border-radius: 100%;
-  padding: 0.5em;
+  padding: 10px;
   width: 50px;
   cursor: pointer;
 }
 
 .bg-img {
   width: 100%;
-  height: 500px;
+  height: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   background-position: center;
+  overflow: hidden;
+  opacity: 30%;
+}
+
+.bg-img img {
+  position: absolute;
+  bottom: 0;
 }
 
 .detail-content {
-  height: 100vh;
   display: flex;
-  padding: 8em 20%;
-  background-color: rgba(211, 211, 211, 0.3);
+  height: 100%;
+  padding: 100px 12%;
+  /* background-color: rgb(250, 250, 250,0.2); */
   position: absolute;
   top: 0;
 }
@@ -43,9 +51,9 @@
 }
 
 .title-content {
-  background-color: rgb(238, 238, 238, 0.8);
+  /* background-color: rgb(255, 255, 255, 0.8); */
   display: inline-block;
-  padding: 0 0.1em;
+  padding: 1.2px;
 }
 
 .detail-content .content {
@@ -90,7 +98,8 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.detail-content .content .detail-img {
+.detail-img {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 400px;
   height: 375px;
 }
@@ -98,6 +107,6 @@
 .detail-content .content .vertical-line {
   width: 50px;
   height: 2px;
-  background-color: gray;
-  margin-bottom: 1em;
+  background-color: var(--fourth-color);
+  margin-bottom: 10px;
 }
