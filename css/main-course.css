@@ -15,8 +15,8 @@
   width: 80px;
   height: 80px;
   border-radius: 100%;
-  background-color: var(--fifth-color);
-  color: var(--first-color);
+  background-color: var(--sixth-color);
+  /* color: var(--first-color); */
 }
 .start,
 .end {
@@ -27,7 +27,7 @@
   height: 60px;
   border-radius: 100%;
   background-color: var(--fifth-color);
-  color: var(--first-color);
+  /* color: var(--first-color); */
 }
 
 .course-name,
@@ -83,7 +83,7 @@
   height: 40px;
   border-radius: 100%;
   background-color: var(--fourth-color);
-  color: var(--first-color);
+  /* color: var(--first-color); */
 }
 .left-content .list-item .number {
   position: absolute;

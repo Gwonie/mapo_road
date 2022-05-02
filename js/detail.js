@@ -4,8 +4,8 @@ let idx = 0;
 const closeBtn = document.querySelector(".close-btn");
 
 // 추천스팟 클릭이벤트 핸들러
-function showDetailHandler(e) {
-  let name = e.target.alt;
+function showDetail(hash) {
+  let name = hash;
   let result = {};
 
   recomSpots.forEach((elm) => {

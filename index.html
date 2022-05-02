@@ -60,7 +60,7 @@
         <h1 class="title">성미산 동네길</h1>
         <div class="horizantal-line"></div>
         <p>
-          산책이 필요한 날, 성미산에 오른다. 마포 성산동 지명의 유래가 된
+          &nbsp산책이 필요한 날, 성미산에 오른다. 마포 성산동 지명의 유래가 된
           성미산(성산)은 해발 66m 높이로 나지막해 가볍게 오르내리기에 딱
           적당하다. 성산근린공원에서 잠시 쉬었다가 내려오면, 이제부터 본격적으로
           즐길 거리를 찾을 차례. 편안한 분위기의 아담한 카페, 서울의 3대
@@ -130,43 +130,56 @@
       <h1>추천스팟</h1>
       <h2>📍</h2>
       <div class="recom-images">
-        <img
-          class="recom-img"
-          src="images/sungsan_park2.jpg"
-          alt="성산근린공원"
-          onclick="showDetailHandler(event)"
-        />
-        <img
-          class="recom-img"
-          src="images/month_sculpture.jpg"
-          alt="먼스스컬프쳐"
-          onclick="showDetailHandler(event)"
-        />
-        <img
-          src="images/richemont.jpg"
-          alt="리치몬드과자점 성산 본점"
-          onclick="showDetailHandler(event)"
-        />
-        <img
-          src="images/museum2.jpg"
-          alt="전쟁과여성인권박물관"
-          onclick="showDetailHandler(event)"
-        />
-        <img
-          src="images/beatroad.jpg"
-          alt="비트로드"
-          onclick="showDetailHandler(event)"
-        />
-        <img
-          src="images/choi_house.jpg"
-          alt="최규하 대통령 가옥"
-          onclick="showDetailHandler(event)"
-        />
-        <img
-          src="images/danginli.jpg"
-          alt="당인리 책발전소"
-          onclick="showDetailHandler(event)"
-        />
+        <div class="recom-image" onclick="showDetail('성산근린공원')">
+          <h3>성산근린공원</h3>
+          <div class="recom-image-bg"></div>
+          <img src="images/sungsan_park2.jpg" alt="성산근린공원" />
+        </div>
+        <div class="recom-image" onclick="showDetail('먼스스컬프쳐')">
+          <h3>먼스스컬프쳐</h3>
+          <div class="recom-image-bg"></div>
+          <img src="images/month_sculpture.jpg" alt="먼스스컬프쳐" />
+        </div>
+        <div
+          class="recom-image"
+          onclick="showDetail('리치몬드과자점 성산 본점')"
+        >
+          <h3>리치몬드과자점 성산 본점</h3>
+          <div class="recom-image-bg"></div>
+          <img src="images/richemont.jpg" alt="리치몬드과자점 성산 본점" />
+        </div>
+        <div class="recom-image" onclick="showDetail('전쟁과여성인권박물관')">
+          <h3>전쟁과여성인권박물관</h3>
+          <div class="recom-image-bg"></div>
+          <img src="images/museum2.jpg" alt="전쟁과여성인권박물관" />
+        </div>
+        <div class="recom-image" onclick="showDetail('비트로드')">
+          <h3>비트로드</h3>
+          <div class="recom-image-bg"></div>
+          <img
+            src="images/beatroad.jpg"
+            alt="비트로드"
+            onclick="showDetail(event)"
+          />
+        </div>
+        <div class="recom-image" onclick="showDetail('최규하 대통령 가옥')">
+          <h3>최규하 대통령 가옥</h3>
+          <div class="recom-image-bg"></div>
+          <img
+            src="images/choi_house.jpg"
+            alt="최규하 대통령 가옥"
+            onclick="showDetail(event)"
+          />
+        </div>
+        <div class="recom-image" onclick="showDetail('당인리 책발전소')">
+          <h3>당인리 책발전소</h3>
+          <div class="recom-image-bg"></div>
+          <img
+            src="images/danginli.jpg"
+            alt="당인리 책발전소"
+            onclick="showDetail(event)"
+          />
+        </div>
       </div>
     </div>
     <div class="detail">

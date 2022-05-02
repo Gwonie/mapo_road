@@ -11,7 +11,7 @@
 
 .aside-wrap .title {
   background-color: var(--fourth-color);
-  color: var(--first-color);
+  /* color: var(--first-color); */
   margin-top: 14px;
 }
 
