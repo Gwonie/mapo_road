@@ -17,6 +17,7 @@
   border-radius: 100%;
   background-color: var(--sixth-color);
   /* color: var(--first-color); */
+  color: var(--first-color);
 }
 .start,
 .end {
@@ -61,6 +62,7 @@
   /* border: 1px solid black; */
   position: relative;
   min-height: 260px;
+  font-weight: 570;
 }
 .left-content .list-item {
   justify-content: flex-end;
@@ -74,6 +76,7 @@
   height: 250px;
   background-color: lightskyblue;
   margin: 10px;
+  border-radius: 10px;
 }
 .list-item .number {
   display: flex;

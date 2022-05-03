@@ -4,25 +4,30 @@ header {
   text-align: center;
 }
 nav {
+  width: 100%;
+  position: fixed;
   display: flex;
-  height: 55px;
-  background-color: var(--fifth-color);
+  height: 65px;
+  background-color: rgb(33, 33, 33, 0.5);
+  padding: 0 150px;
+  z-index: 10;
 }
 .logo {
   /* background-color: lightblue; */
   width: 500px;
+  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .logo img {
   width: 100px;
-  cursor: pointer;
 }
 nav ul {
   list-style: none;
   /* background-color: lightpink; */
-  width: 1000px;
+  /* width: 1000px; */
+  width: 70%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -32,11 +37,23 @@ nav ul li a {
   color: var(--first-color);
   font-weight: 600;
   font-size: 18px;
+  padding: 5px 10px;
 }
+/* nav ul li a:hover {
+  background-color: var(--fourth-color);
+  color: black;
+  transition: 0.3s ease-in-out;
+  border-radius: 5px;
+} */
 .header-img {
-  background-image: url(../images/header-img1.JPG);
-  height: 445px;
+  /* background-image: url(../images/header-img1.JPG); */
+  background-color: var(--sixth-color);
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 55px;
 }
