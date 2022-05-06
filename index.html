@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>마포걷고싶은길</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=98fa6089b716be099640d2441c008b6e"
+    ></script>
+    <script defer src="js/mapData.js"></script>
+    <script defer src="js/map.js"></script>
     <script defer src="js/detailData.js"></script>
     <script defer src="js/detail.js"></script>
     <script
@@ -80,6 +86,8 @@
           골목길에서도 의미를 찾을 줄 아는. 그런 당신에게 <b>성미산 동네길</b>이
           답이다.
         </p>
+        <div class="horizantal-line"></div>
+        <div id="map"></div>
       </div>
     </div>
     <div id="main-course" class="main-course">
