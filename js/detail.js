@@ -31,7 +31,7 @@ function showModal(res) {
   showSlides(idx);
 
   const detailInfo = document.querySelector("#detail-info");
-  detailInfo.innerText = res.description;
+  detailInfo.innerHTML = res.description;
 }
 
 // 슬라이드 쇼 띄우는 함수
