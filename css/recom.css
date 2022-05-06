@@ -1,5 +1,5 @@
 .recom {
-  padding: 60px 0;
+  padding: 130px 0;
   background-color: var(--third-color);
   text-align: center;
 }
@@ -59,7 +59,8 @@
   border-radius: 10px;
   width: 100%;
   height: 100%;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset; 
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset,
+    rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset;
   /* background-color: var(--first-color); */
 }
 
