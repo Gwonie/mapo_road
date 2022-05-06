@@ -5,3 +5,7 @@ footer {
   align-items: center;
   background-color: var(--fourth-color);
 }
+
+.footer-info p {
+  font-family: "Cafe24SsurroundAir";
+}

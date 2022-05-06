@@ -36,6 +36,7 @@
 .number,
 .end {
   font-weight: 600;
+  font-family: "Cafe24SsurroundAir";
 }
 
 .wrap-content2 {
@@ -62,8 +63,13 @@
   /* border: 1px solid black; */
   position: relative;
   min-height: 260px;
-  font-weight: 570;
 }
+
+.list-item span {
+  font-family: "Cafe24SsurroundAir";
+  font-weight: 600;
+}
+
 .left-content .list-item {
   justify-content: flex-end;
   padding-right: 40px;

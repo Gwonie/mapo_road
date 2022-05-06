@@ -23,6 +23,10 @@ nav {
 .logo img {
   width: 100px;
 }
+.logo img:hover {
+  transition: 0.15s ease-in-out;
+  transform: scale(1.1);
+}
 nav ul {
   list-style: none;
   /* background-color: lightpink; */
@@ -32,19 +36,21 @@ nav ul {
   justify-content: space-evenly;
   align-items: center;
 }
+nav ul li:hover {
+  transition: 0.15s ease-in-out;
+  transform: scale(1.1);
+}
 nav ul li a {
   text-decoration: none;
   color: var(--first-color);
   font-weight: 600;
-  font-size: 18px;
+  font-size: 22px;
   padding: 5px 10px;
+  font-family: "Cafe24Ssurround";
 }
-/* nav ul li a:hover {
-  background-color: var(--fourth-color);
-  color: black;
-  transition: 0.3s ease-in-out;
-  border-radius: 5px;
-} */
+nav ul li a:hover {
+  color: var(--fourth-color);
+}
 .header-img {
   /* background-image: url(../images/header-img1.JPG); */
   background-color: var(--sixth-color);

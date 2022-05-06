@@ -1,5 +1,6 @@
 /* @import url("reset.css"); */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
 @import url("header.css");
 @import url("intro.css");
 @import url("main-course.css");
@@ -7,12 +8,29 @@
 @import url("footer.css");
 @import url("detail.css");
 
+@font-face {
+  font-family: "Cafe24Ssurround";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   font-family: "Noto Sans KR", sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 html {
   /* background-color: lightcoral; */
 }
@@ -22,8 +40,17 @@ html {
   --third-color: #f5f5f5;
   /* --fourth-color: #9e9e9e;
   --fifth-color: #212121; */
-  
-  --fourth-color: #FFD365;
-  --fifth-color: #00C897;
-  --sixth-color: #019267
+
+  --fourth-color: #ffd365;
+  --fifth-color: #00c897;
+  --sixth-color: #019267;
+}
+
+h1,
+h2 {
+  font-family: "Cafe24Ssurround";
+}
+
+h3{
+  font-family: "Cafe24SsurroundAir";
 }
