@@ -8,12 +8,10 @@ nav {
   position: fixed;
   display: flex;
   height: 65px;
-  background-color: rgb(33, 33, 33, 0.5);
   padding: 0 150px;
   z-index: 10;
 }
 .logo {
-  /* background-color: lightblue; */
   width: 500px;
   width: 30%;
   display: flex;
@@ -29,8 +27,6 @@ nav {
 }
 nav ul {
   list-style: none;
-  /* background-color: lightpink; */
-  /* width: 1000px; */
   width: 70%;
   display: flex;
   justify-content: space-evenly;
@@ -52,7 +48,6 @@ nav ul li a:hover {
   color: var(--fourth-color);
 }
 .header-img {
-  /* background-image: url(../images/header-img1.JPG); */
   background-color: var(--sixth-color);
   height: 100%;
   background-size: cover;

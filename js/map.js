@@ -65,8 +65,6 @@ var linePath = [];
 // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
 coordinates.forEach((elm) => {
   linePath.push(new kakao.maps.LatLng(elm.lng, elm.lat));
-
-  console.log(linePath);
 });
 
 var firstCircleOverlay = new kakao.maps.CustomOverlay({
@@ -94,4 +92,4 @@ var polyline = new kakao.maps.Polyline({
   strokeStyle: "solid", // 선의 스타일입니다
 });
 
-polyline.setPath(path);
+polyline.setPath(linePath);
