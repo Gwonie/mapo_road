@@ -57,4 +57,43 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   padding-top: 55px;
+  position: relative;
+}
+
+#shoe-print-left {
+  width: 70px;
+  position: absolute;
+  transform: translateX(600px) rotate(20deg);
+  animation: shoeMoving 1s;
+  transition: 0.1s linear;
+}
+#shoe-print-right {
+  width: 70px;
+  position: absolute;
+  transform: translateX(450px) translateY(50px) rotate(30deg);
+  animation: shoeMoving 1s;
+  transition: 0.1s linear;
+}
+#shoe-print-left2 {
+  width: 85px;
+  position: absolute;
+  transform: translateX(500px) translateY(150px) rotate(40deg);
+  animation: shoeMoving 1s;
+  transition: 0.1s linear;
+}
+#shoe-print-right2 {
+  width: 85px;
+  position: absolute;
+  transform: translateX(350px) translateY(200px) rotate(50deg);
+  animation: shoeMoving 1s;
+  transition: 0.1s linear;
+}
+
+@keyframes shoeMoving {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
