@@ -1,3 +1,4 @@
+/* 코스소개 CSS */
 .intro {
   display: flex;
   padding: 0 150px;
@@ -8,37 +9,38 @@
   padding: 130px 30px 130px 60px;
   width: 30%;
 }
-
 .aside-wrap .title {
   background-color: var(--fourth-color);
   margin-top: 14px;
-  padding: 0px 3px;
+  padding: 7px;
   font-family: "Cafe24SsurroundAir";
+  border-radius: 4px;
 }
-
 .length,
 .time,
 .level {
   display: inline-block;
+}
+.aside-wrap p {
+  padding: 7px;
+}
+.aside-wrap span {
+  padding: 0px 7px;
 }
 
 .content-wrap {
   width: 70%;
   padding: 130px 60px 130px 30px;
 }
-
 .content-wrap .title {
-  display: inline-block;
   margin-bottom: 14px;
 }
-
 .content-wrap .horizantal-line {
   width: 85px;
   height: 2px;
   background-color: var(--fourth-color);
   margin-bottom: 14px;
 }
-
 .content-wrap p {
   margin-bottom: 14px;
 }
@@ -49,7 +51,6 @@
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
-
 .dot {
   overflow: hidden;
   float: left;

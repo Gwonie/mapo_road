@@ -1,8 +1,10 @@
+/* HEADER CSS */
 header {
   height: 500px;
   background-color: lightgreen;
   text-align: center;
 }
+
 nav {
   width: 100%;
   position: fixed;
@@ -11,6 +13,7 @@ nav {
   padding: 0 150px;
   z-index: 10;
 }
+
 .logo {
   width: 500px;
   width: 30%;
@@ -25,6 +28,7 @@ nav {
   transition: 0.15s ease-in-out;
   transform: scale(1.1);
 }
+
 nav ul {
   list-style: none;
   width: 70%;
@@ -47,6 +51,7 @@ nav ul li a {
 nav ul li a:hover {
   color: var(--fourth-color);
 }
+
 .header-img {
   background-color: var(--sixth-color);
   height: 100%;

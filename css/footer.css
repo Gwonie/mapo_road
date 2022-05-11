@@ -1,3 +1,4 @@
+/* FOOTER CSS */
 footer {
   padding: 60px 0;
   display: flex;
@@ -5,7 +6,6 @@ footer {
   align-items: center;
   background-color: var(--fourth-color);
 }
-
 .footer-info p {
   font-family: "Cafe24SsurroundAir";
 }

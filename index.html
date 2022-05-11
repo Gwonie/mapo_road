@@ -6,26 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>마포걷고싶은길</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/main.js"></script>
+    <script defer src="js/detailData.js"></script>
+    <!-- 카카오맵 관련 스크립트 -->
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=98fa6089b716be099640d2441c008b6e"
     ></script>
-    <script defer src="js/main.js"></script>
     <script defer src="js/mapData.js"></script>
     <script defer src="js/map.js"></script>
-    <script defer src="js/detailData.js"></script>
-    <script defer src="js/detail.js"></script>
+    <!-- fontawesome 스크립트 -->
     <script
       src="https://kit.fontawesome.com/8b24afa1f8.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
+    <!-- HEADER -->
     <header>
       <nav>
         <div class="logo">
           <a href="#">
-            <img src="images/mapo_logo.svg" alt="logo" />
+            <img src="images/mapo_logo_header.svg" alt="logo" />
           </a>
         </div>
         <ul>
@@ -42,13 +44,14 @@
       </nav>
       <div class="header-img">
         <img src="images/ec_tit_itx.png" alt="" />
-        <!-- <img id="shoe" src="images/shoe-prints-solid.svg" alt="" /> -->
         <img id="shoe-print-left" src="images/shoe-print-left.png" alt="" />
         <img id="shoe-print-left2" src="images/shoe-print-left.png" alt="" />
         <img id="shoe-print-right" src="images/shoe-print-right.png" alt="" />
         <img id="shoe-print-right2" src="images/shoe-print-right.png" alt="" />
       </div>
     </header>
+
+    <!-- 코스소개 -->
     <div id="intro" class="intro">
       <div class="aside-wrap">
         <h2>Course7</h2>
@@ -59,6 +62,7 @@
           리치몬드과자점 성산본점 - 전쟁과여성인권박물관 - 최규하 대통령 가옥 -
           비트로드 - 당인리 책발전소 - 망원역 1번 출구
         </p>
+        <br />
         <h3 class="title length">길이</h3>
         <span>약 3.5km</span>
         <br />
@@ -67,6 +71,8 @@
         <br />
         <h3 class="title level">난이도</h3>
         <span>下</span>
+        <br />
+        <br />
         <h3 class="title">주차</h3>
         <p>
           성산2-1 공영주차장, 마포중앙도서관 주차장, 망원 공영주차장, 망원1-2
@@ -96,12 +102,15 @@
         <div id="map"></div>
       </div>
     </div>
+
+    <!-- 주요코스 -->
     <div id="main-course" class="main-course">
       <div class="wrap-content1">
         <h1>주요코스</h1>
-        <h2>🏃‍♂️</h2>
         <br />
         <div class="course-name">7코스</div>
+        <br />
+        <h2 id="runner">🏃‍♂️</h2>
         <div class="start">출발</div>
       </div>
       <div class="wrap-content2">
@@ -159,6 +168,8 @@
         <div class="end">도착</div>
       </div>
     </div>
+
+    <!-- 추천스팟 -->
     <div id="recom" class="recom">
       <h1>추천스팟</h1>
       <h2>📍</h2>
@@ -206,6 +217,8 @@
         </div>
       </div>
     </div>
+
+    <!-- 추천스팟 상세내용(모달창) -->
     <div class="detail">
       <div class="detail-wrapper">
         <div class="bg-img">
@@ -230,6 +243,8 @@
         </div>
       </div>
     </div>
+
+    <!-- FOOTER -->
     <footer>
       <div class="footer-info">
         <img src="images/mapo_logo_footer.svg" alt="" width="100px" />

@@ -1,20 +1,21 @@
+/* 주요코스 CSS */
 .main-course {
   padding: 130px 0;
   background-color: var(--second-color);
 }
+
 .wrap-content1 {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .course-name {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
+  width: 100px;
+  height: 50px;
+  border-radius: 12px;
   background-color: var(--sixth-color);
   color: var(--first-color);
 }
@@ -28,7 +29,11 @@
   border-radius: 100%;
   background-color: var(--fifth-color);
 }
-
+.start:hover,
+.end:hover {
+  /* transform: scale(1.2);
+  transition: 0.1s ease; */
+}
 .course-name,
 .start,
 .number,
@@ -52,17 +57,20 @@
 .right-content {
   width: 50%;
 }
-
 .list-item {
   display: flex;
   align-items: center;
   position: relative;
   min-height: 260px;
 }
-
 .list-item span {
   font-family: "Cafe24SsurroundAir";
   font-weight: 600;
+}
+.list-item span:hover {
+  transform: scale(1.1);
+  transition: 0.1s ease;
+  color: var(--sixth-color);
 }
 
 .left-content .list-item {
@@ -95,7 +103,6 @@
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-
 .list-item .number {
   display: flex;
   justify-content: center;
@@ -105,6 +112,11 @@
   border-radius: 100%;
   background-color: var(--fourth-color);
 }
+.list-item .number:hover {
+  /* transform: scale(1.2);
+  transition: 0.1s ease; */
+}
+
 .left-content .list-item .number {
   position: absolute;
   right: -20.5px;
@@ -113,7 +125,14 @@
   position: absolute;
   left: -20.5px;
 }
+
 .wrap-content3 {
   display: flex;
   justify-content: center;
+}
+
+#runner{
+  position: absolute;
+  transform: translateY(120px);
+  animation: running;
 }
