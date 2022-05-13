@@ -1,7 +1,3 @@
-const headerScrollHeight = document.querySelector("header").scrollHeight;
-const nav = document.querySelector("nav");
-const line = document.querySelector(".vertical-line");
-
 const numbers = document.querySelectorAll(".number");
 let numberBottoms = [];
 
@@ -17,8 +13,6 @@ numberBottoms = numberBottoms.sort();
 
 const start = document.querySelector(".start");
 const startBottom = window.scrollY + start.getBoundingClientRect().bottom;
-const end = document.querySelector(".end");
-const endTop = window.scrollY + end.getBoundingClientRect().top;
 
 let heightBetween = [];
 for (let i = 1; i < numberBottoms.length; i++) {
@@ -33,6 +27,9 @@ document.addEventListener("scroll", function () {
 });
 
 function changeNavBgColor() {
+  const headerScrollHeight = document.querySelector("header").scrollHeight;
+  const nav = document.querySelector("nav");
+
   let currentScrollValue = document.documentElement.scrollTop;
 
   nav.style.backgroundColor = "rgb(33, 33, 33, 0.5)";
@@ -44,6 +41,11 @@ function changeNavBgColor() {
 
 function changeLine() {
   let windowBottom = window.scrollY + window.innerHeight;
+  const line = document.querySelector(".vertical-line");
+
+  const end = document.querySelector(".end");
+  const endTop = window.scrollY + end.getBoundingClientRect().top;
+
 
   if (windowBottom > numberBottoms[1]) {
     line.style.height = `${heightBetween[0]}px`;
@@ -72,28 +74,28 @@ function changeLine() {
 }
 
 // header 애니메이션
-const shoePrintLeft = document.getElementById("shoe-print-left");
-const shoePrintLeft2 = document.getElementById("shoe-print-left2");
-const shoePrintRight = document.getElementById("shoe-print-right");
-const shoePrintRight2 = document.getElementById("shoe-print-right2");
+// const shoePrintLeft = document.getElementById("shoe-print-left");
+// const shoePrintLeft2 = document.getElementById("shoe-print-left2");
+// const shoePrintRight = document.getElementById("shoe-print-right");
+// const shoePrintRight2 = document.getElementById("shoe-print-right2");
 
-// setInterval(() => {
-setTimeout(() => {
-  shoePrintLeft.style.display = "block";
-}, 1000);
-setTimeout(() => {
-  shoePrintRight.style.display = "block";
-}, 2000);
-setTimeout(() => {
-  shoePrintLeft2.style.display = "block";
-}, 3000);
-setTimeout(() => {
-  shoePrintRight2.style.display = "block";
-}, 4000);
-shoePrintLeft.style.display = "none";
-shoePrintLeft2.style.display = "none";
-shoePrintRight.style.display = "none";
-shoePrintRight2.style.display = "none";
+// // setInterval(() => {
+// setTimeout(() => {
+//   shoePrintLeft.style.display = "block";
+// }, 1000);
+// setTimeout(() => {
+//   shoePrintRight.style.display = "block";
+// }, 2000);
+// setTimeout(() => {
+//   shoePrintLeft2.style.display = "block";
+// }, 3000);
+// setTimeout(() => {
+//   shoePrintRight2.style.display = "block";
+// }, 4000);
+// shoePrintLeft.style.display = "none";
+// shoePrintLeft2.style.display = "none";
+// shoePrintRight.style.display = "none";
+// shoePrintRight2.style.display = "none";
 // }, 5000);
 
 const detail = document.querySelector(".detail");

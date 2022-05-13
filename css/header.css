@@ -65,6 +65,10 @@ nav ul li a:hover {
   position: relative;
 }
 
+.header-img img{
+  width: 33.3vmax;
+}
+
 #shoe-print-left {
   width: 70px;
   position: absolute;
