@@ -2,7 +2,7 @@ let recomSpots = [
   {
     title: "성산근린공원",
     title_des: "성미산 한바퀴",
-    slide_img: ["sungsan_park.jpg", "sungsan_park2.jpg"],
+    slide_img: ["sungsan_park2.jpg", "sungsan_park.jpg"],
     description: `&nbsp&nbsp‘성미’의 정확한 한자 명칭은 <b>성산(城山)</b>으로, 성산동의 지명도 여기서 유래되었다.
     100m가 채 되지 않는 완만한 높이의 성산은 주민들의 <b>쉼터</b> 및 <b>산책코스</b>로 인기가 높다.
     과거 성산2동까지 뻗어 있었던 성산은 일제시대 당시 개발로 인해 지금의 성산1동에 일부만 남았고 그곳에 공원이 조성됐다.

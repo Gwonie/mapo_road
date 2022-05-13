@@ -12,8 +12,8 @@
 .aside-wrap .title {
   background-color: var(--fourth-color);
   margin-top: 14px;
-  padding: 7px;
   font-family: "Cafe24SsurroundAir";
+  padding: 7px;
   border-radius: 4px;
 }
 .length,
@@ -30,9 +30,10 @@
 
 .content-wrap {
   width: 70%;
-  padding: 130px 60px 130px 30px;
+  padding: 200px 60px 130px 30px;
 }
 .content-wrap .title {
+  display: inline-block;
   margin-bottom: 14px;
 }
 .content-wrap .horizantal-line {

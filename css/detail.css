@@ -64,7 +64,9 @@
 }
 .title-content {
   display: inline-block;
-  padding: 1.2px;
+}
+#title1 {
+  margin-bottom: 8px;
 }
 
 .detail-content .content {
@@ -85,12 +87,12 @@
   width: auto;
   padding: 16px;
   margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
+  color: black;
+  font-weight: bolder;
+  font-size: 20px;
   transition: 0.6s ease;
   user-select: none;
-  background-color: rgb(255, 211, 101, 0.6);
+  background-color: rgb(101, 142, 255, 0.75);
 }
 .prev {
   left: 0;
@@ -102,7 +104,7 @@
 }
 .prev:hover,
 .next:hover {
-  background-color: rgb(255, 211, 101, 0.9);
+  background-color: rgb(101, 142, 255, 1);
 }
 .detail-img {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
