@@ -1,8 +1,38 @@
-// navbar 배경색 변화 기능
 const headerScrollHeight = document.querySelector("header").scrollHeight;
 const nav = document.querySelector("nav");
+const line = document.querySelector(".vertical-line");
+
+const numbers = document.querySelectorAll(".number");
+let numberBottoms = [];
+
+numbers.forEach((number) => {
+  numberBottoms.push(
+    window.pageYOffset +
+      number.getBoundingClientRect().top +
+      number.scrollHeight
+  );
+});
+
+numberBottoms = numberBottoms.sort();
+
+const start = document.querySelector(".start");
+const startBottom = window.scrollY + start.getBoundingClientRect().bottom;
+const end = document.querySelector(".end");
+const endTop = window.scrollY + end.getBoundingClientRect().top;
+
+let heightBetween = [];
+for (let i = 1; i < numberBottoms.length; i++) {
+  heightBetween.push(150 + (numberBottoms[i] - numberBottoms[0]));
+}
+
+// console.log(cal);
 
 document.addEventListener("scroll", function () {
+  changeNavBgColor();
+  changeLine();
+});
+
+function changeNavBgColor() {
   let currentScrollValue = document.documentElement.scrollTop;
 
   nav.style.backgroundColor = "rgb(33, 33, 33, 0.5)";
@@ -10,7 +40,36 @@ document.addEventListener("scroll", function () {
   if (currentScrollValue < headerScrollHeight) {
     nav.style.backgroundColor = "#019267";
   }
-});
+}
+
+function changeLine() {
+  let windowBottom = window.scrollY + window.innerHeight;
+
+  if (windowBottom > numberBottoms[1]) {
+    line.style.height = `${heightBetween[0]}px`;
+  }
+  if (windowBottom > numberBottoms[2]) {
+    line.style.height = `${heightBetween[1]}px`;
+  }
+  if (windowBottom > numberBottoms[3]) {
+    line.style.height = `${heightBetween[2]}px`;
+  }
+  if (windowBottom > numberBottoms[4]) {
+    line.style.height = `${heightBetween[3]}px`;
+  }
+  if (windowBottom > numberBottoms[5]) {
+    line.style.height = `${heightBetween[4]}px`;
+  }
+  if (windowBottom > numberBottoms[6]) {
+    line.style.height = `${heightBetween[5]}px`;
+  }
+  if (windowBottom > numberBottoms[7]) {
+    line.style.height = `${heightBetween[6]}px`;
+  }
+  if (windowBottom > endTop) {
+    line.style.height = `${150 + (endTop - numberBottoms[0])}px`;
+  }
+}
 
 // header 애니메이션
 const shoePrintLeft = document.getElementById("shoe-print-left");
