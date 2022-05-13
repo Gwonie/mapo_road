@@ -1,5 +1,6 @@
 /* 주요코스 CSS */
 .main-course {
+  width: 100%;
   padding: 130px 0;
   background-color: var(--second-color);
 }
@@ -45,7 +46,7 @@
 .vertical-line {
   width: 2px;
   height: 150px;
-  background-color: gray;
+  background-color: rgb(1, 146, 103, 0.8);
   transition: 0.5s linear;
 }
 

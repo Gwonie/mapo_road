@@ -2,7 +2,7 @@
 .detail {
   display: none;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   bottom: 0;
   background-color: rgb(33, 33, 33, 0.8);
@@ -10,14 +10,15 @@
 }
 .detail-wrapper {
   position: fixed;
-  width: 1000px;
-  height: 800px;
-  top: 50px;
-  left: 450px;
+  width: 90%;
+  height: 90%;
+  top: 5%;
+  left: 5%;
   background-color: var(--second-color);
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-  animation: slide 0.5s ease-in-out;
+  /* animation: slide 0.5s ease-in-out; */
   border-radius: 3px;
+  overflow: auto;
 }
 
 .bg-img {
@@ -31,20 +32,20 @@
   opacity: 30%;
 }
 .bg-img img {
+  width: 100%;
   position: absolute;
   bottom: 0;
 }
 
 .detail-content {
   display: flex;
-  height: 100%;
-  padding: 100px;
+  padding: 10% 10% 5%;
   position: absolute;
   top: 0;
 }
 .detail-content .title {
   width: 30%;
-  margin-right: 32px;
+  margin-right: 30px;
 }
 .close-btn {
   position: absolute;
@@ -73,10 +74,10 @@
   width: 70%;
 }
 .slideshow-container {
-  width: 400px;
+  width: 562.5px;
   height: 375px;
   position: relative;
-  margin-bottom: 1em;
+  margin-bottom: 30px;
 }
 .prev,
 .next {
@@ -108,7 +109,7 @@
 }
 .detail-img {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  width: 400px;
+  width: 562.5px;
   height: 375px;
   border-radius: 5px;
 }
@@ -116,5 +117,5 @@
   width: 50px;
   height: 2px;
   background-color: var(--fourth-color);
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }

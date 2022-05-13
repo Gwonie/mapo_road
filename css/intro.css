@@ -1,20 +1,21 @@
 /* 코스소개 CSS */
 .intro {
   display: flex;
-  padding: 0 150px;
   background-color: var(--first-color);
 }
 
 .aside-wrap {
-  padding: 130px 30px 130px 60px;
+  padding: 130px 30px 130px 10%;
   width: 30%;
+  /* background-color: lightpink; */
 }
 .aside-wrap .title {
-  background-color: var(--fourth-color);
+  /* background-color: var(--fourth-color); */
+  /* border-radius: 4px; */
   margin-top: 14px;
   font-family: "Cafe24SsurroundAir";
-  padding: 7px;
-  border-radius: 4px;
+  padding-bottom: 3.5px;
+  border-bottom: 3px solid var(--fourth-color);
 }
 .length,
 .time,
@@ -30,18 +31,23 @@
 
 .content-wrap {
   width: 70%;
-  padding: 200px 60px 130px 30px;
+  padding: 185.5px 10% 130px 30px;
+  /* background-color: lightblue; */
+}
+.title-wrapper{
+  border-bottom: 3px solid var(--fourth-color);
+  margin-bottom: 14px;
 }
 .content-wrap .title {
   display: inline-block;
-  margin-bottom: 14px;
+  margin-bottom: 3.5px;
 }
-.content-wrap .horizantal-line {
+/* .content-wrap .horizantal-line {
   width: 85px;
   height: 2px;
   background-color: var(--fourth-color);
   margin-bottom: 14px;
-}
+} */
 .content-wrap p {
   margin-bottom: 14px;
 }
