@@ -1,25 +1,42 @@
 const numbers = document.querySelectorAll(".number");
+let numbersSorted = [];
+numbers.forEach((number) => numbersSorted.push(number));
+console.log(numbersSorted);
+
 let numberBottoms = [];
+let numberCenters = [];
 
 numbers.forEach((number) => {
   numberBottoms.push(
+    window.pageYOffset + number.getBoundingClientRect().bottom
+  );
+  numberCenters.push(
     window.pageYOffset +
       number.getBoundingClientRect().top +
-      number.scrollHeight
+      number.scrollHeight / 2
   );
 });
 
 numberBottoms = numberBottoms.sort();
+numberCenters = numberCenters.sort();
+
+console.log(numberBottoms, numberCenters);
 
 const start = document.querySelector(".start");
 const startBottom = window.scrollY + start.getBoundingClientRect().bottom;
+const startCenter =
+  window.scrollY + start.getBoundingClientRect().top + start.scrollHeight / 2;
+
+const end = document.querySelector(".end");
+const endCenter =
+  window.scrollY + end.getBoundingClientRect().top + end.scrollHeight / 2;
+const endTop = window.scrollY + end.getBoundingClientRect().top;
 
 let heightBetween = [];
-for (let i = 1; i < numberBottoms.length; i++) {
-  heightBetween.push(150 + (numberBottoms[i] - numberBottoms[0]));
+for (let i = 0; i < numberBottoms.length; i++) {
+  heightBetween.push(numberBottoms[i] - startBottom);
 }
-
-// console.log(cal);
+console.log(heightBetween);
 
 document.addEventListener("scroll", function () {
   changeNavBgColor();
@@ -40,36 +57,46 @@ function changeNavBgColor() {
 }
 
 function changeLine() {
-  let windowBottom = window.scrollY + window.innerHeight;
+  // let windowBottom = window.scrollY + window.innerHeight;
+  let windowCenter = window.scrollY + window.innerHeight / 2;
+  // console.log(windowBottom, windowCenter);
   const line = document.querySelector(".vertical-line");
 
-  const end = document.querySelector(".end");
-  const endTop = window.scrollY + end.getBoundingClientRect().top;
-
-
-  if (windowBottom > numberBottoms[1]) {
+  if (windowCenter > startCenter) {
     line.style.height = `${heightBetween[0]}px`;
+    // line.style.height = `150px`;
   }
-  if (windowBottom > numberBottoms[2]) {
+  if (windowCenter > numberCenters[1]) {
     line.style.height = `${heightBetween[1]}px`;
+    // line.style.height = `275px`;
   }
-  if (windowBottom > numberBottoms[3]) {
+  if (windowCenter > numberCenters[2]) {
     line.style.height = `${heightBetween[2]}px`;
+    // line.style.height = `410px`;
   }
-  if (windowBottom > numberBottoms[4]) {
+  if (windowCenter > numberCenters[3]) {
     line.style.height = `${heightBetween[3]}px`;
+    // line.style.height = `545px`;
   }
-  if (windowBottom > numberBottoms[5]) {
+  if (windowCenter > numberCenters[4]) {
     line.style.height = `${heightBetween[4]}px`;
+    // line.style.height = `670px`;
   }
-  if (windowBottom > numberBottoms[6]) {
+  if (windowCenter > numberCenters[5]) {
     line.style.height = `${heightBetween[5]}px`;
+    // line.style.height = `815px`;
   }
-  if (windowBottom > numberBottoms[7]) {
+  if (windowCenter > numberCenters[6]) {
     line.style.height = `${heightBetween[6]}px`;
+    // line.style.height = `935px`;
   }
-  if (windowBottom > endTop) {
-    line.style.height = `${150 + (endTop - numberBottoms[0])}px`;
+  if (windowCenter > numberCenters[7]) {
+    line.style.height = `${heightBetween[7]}px`;
+    // line.style.height = `1080px`;
+  }
+  if (windowCenter > endCenter) {
+    line.style.height = `${endTop - startBottom}px`;
+    // line.style.height = `150px`;
   }
 }
 

@@ -44,8 +44,8 @@
 }
 
 .vertical-line {
-  width: 2px;
-  height: 150px;
+  width: 4px;
+  height: 0px;
   background-color: rgb(1, 146, 103, 0.8);
   transition: 0.5s linear;
 }
@@ -124,11 +124,11 @@
 
 .left-content .list-item .number {
   position: absolute;
-  right: -20.5px;
+  right: -21.5px;
 }
 .right-content .list-item .number {
   position: absolute;
-  left: -20.5px;
+  left: -21.5px;
 }
 
 .wrap-content3 {
