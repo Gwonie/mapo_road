@@ -7,12 +7,12 @@
 }
 .recom-images {
   width: 100%;
-  margin: 30px auto;
+  /* margin: 30px auto; */
   display: grid;
-  grid-row-gap: 15px;
+  grid-row-gap: 40px;
   padding: 5%;
   place-items: center center;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(345px, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(275px, 1fr));
 }
 
