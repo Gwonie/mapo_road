@@ -1,128 +1,172 @@
-const numbers = document.querySelectorAll(".number");
-let numbersSorted = [];
-numbers.forEach((number) => numbersSorted.push(number));
-console.log(numbersSorted);
-
-let numberBottoms = [];
-let numberCenters = [];
-
-numbers.forEach((number) => {
-  numberBottoms.push(
-    window.pageYOffset + number.getBoundingClientRect().bottom
-  );
-  numberCenters.push(
-    window.pageYOffset +
-      number.getBoundingClientRect().top +
-      number.scrollHeight / 2
-  );
-});
-
-numberBottoms = numberBottoms.sort();
-numberCenters = numberCenters.sort();
-
-console.log(numberBottoms, numberCenters);
-
-const start = document.querySelector(".start");
-const startBottom = window.scrollY + start.getBoundingClientRect().bottom;
-const startCenter =
-  window.scrollY + start.getBoundingClientRect().top + start.scrollHeight / 2;
-
-const end = document.querySelector(".end");
-const endCenter =
-  window.scrollY + end.getBoundingClientRect().top + end.scrollHeight / 2;
-const endTop = window.scrollY + end.getBoundingClientRect().top;
-
-let heightBetween = [];
-for (let i = 0; i < numberBottoms.length; i++) {
-  heightBetween.push(numberBottoms[i] - startBottom);
-}
-console.log(heightBetween);
-
+// 스크롤 이벤트
 document.addEventListener("scroll", function () {
   changeNavBgColor();
+  changeLinkColor();
   changeLine();
 });
 
+// navbar 배경색 변화 기능
 function changeNavBgColor() {
-  const headerScrollHeight = document.querySelector("header").scrollHeight;
+  const headerBottom = document
+    .querySelector("header")
+    .getBoundingClientRect().bottom;
   const nav = document.querySelector("nav");
 
-  let currentScrollValue = document.documentElement.scrollTop;
+  let currentScrollValue = window.pageYOffset;
 
   nav.style.backgroundColor = "rgb(33, 33, 33, 0.5)";
 
-  if (currentScrollValue < headerScrollHeight) {
+  if (currentScrollValue < headerBottom) {
     nav.style.backgroundColor = "#019267";
   }
 }
 
+// navbar link 색깔 변화 기능
+function changeLinkColor() {
+  let currentScrollValue = window.pageYOffset;
+
+  const introTop = Math.floor(
+    window.pageYOffset +
+      document.getElementById("intro").getBoundingClientRect().top
+  );
+  const mainCourseTop = Math.floor(
+    window.pageYOffset +
+      document.getElementById("main-course").getBoundingClientRect().top
+  );
+  const recomTop = Math.floor(
+    window.pageYOffset +
+      document.getElementById("recom").getBoundingClientRect().top
+  );
+
+  const navLink = document.querySelectorAll("nav ul li a");
+
+  navLink[0].style.color = "#ffffff";
+  navLink[1].style.color = "#ffffff";
+  navLink[2].style.color = "#ffffff";
+
+  if (currentScrollValue >= introTop && currentScrollValue < mainCourseTop) {
+    console.log("도착");
+    navLink[0].style.color = "#ffd365";
+  }
+
+  if (currentScrollValue >= mainCourseTop && currentScrollValue < recomTop) {
+    console.log("도착");
+    navLink[1].style.color = "#ffd365";
+  }
+
+  if (currentScrollValue >= recomTop) {
+    console.log("도착");
+    navLink[2].style.color = "#ffd365";
+  }
+}
+
+// 주요코스 요소 절대좌표
+let startCenter = 0;
+let numberCenters = [];
+let heightBetween = [];
+let endCenter = 0;
+let endTop = 0;
+let startBottom = 0;
+
+function getCoordinates() {
+  const numbers = document.querySelectorAll(".number");
+  let numbersSorted = [];
+  numbers.forEach((number) => numbersSorted.push(number));
+
+  let numberBottoms = [];
+
+  numbers.forEach((number) => {
+    numberBottoms.push(
+      window.pageYOffset + number.getBoundingClientRect().bottom
+    );
+    numberCenters.push(
+      window.pageYOffset +
+        number.getBoundingClientRect().top +
+        number.scrollHeight / 2
+    );
+  });
+
+  numberBottoms = numberBottoms.sort();
+  numberCenters = numberCenters.sort();
+
+  const start = document.querySelector(".start");
+  startBottom = window.pageYOffset + start.getBoundingClientRect().bottom;
+  startCenter =
+    window.pageYOffset +
+    start.getBoundingClientRect().top +
+    start.scrollHeight / 2;
+
+  const end = document.querySelector(".end");
+  endCenter =
+    window.pageYOffset + end.getBoundingClientRect().top + end.scrollHeight / 2;
+  endTop = window.pageYOffset + end.getBoundingClientRect().top;
+
+  for (let i = 0; i < numberBottoms.length; i++) {
+    heightBetween.push(numberBottoms[i] - startBottom);
+  }
+}
+
+getCoordinates();
+
+// 주요코스 수직선 변화 기능
 function changeLine() {
-  // let windowBottom = window.scrollY + window.innerHeight;
-  let windowCenter = window.scrollY + window.innerHeight / 2;
-  // console.log(windowBottom, windowCenter);
+  let windowCenter = window.pageYOffset + window.innerHeight / 2;
   const line = document.querySelector(".vertical-line");
+
+  line.style.height = 0;
 
   if (windowCenter > startCenter) {
     line.style.height = `${heightBetween[0]}px`;
-    // line.style.height = `150px`;
   }
   if (windowCenter > numberCenters[1]) {
     line.style.height = `${heightBetween[1]}px`;
-    // line.style.height = `275px`;
   }
   if (windowCenter > numberCenters[2]) {
     line.style.height = `${heightBetween[2]}px`;
-    // line.style.height = `410px`;
   }
   if (windowCenter > numberCenters[3]) {
     line.style.height = `${heightBetween[3]}px`;
-    // line.style.height = `545px`;
   }
   if (windowCenter > numberCenters[4]) {
     line.style.height = `${heightBetween[4]}px`;
-    // line.style.height = `670px`;
   }
   if (windowCenter > numberCenters[5]) {
     line.style.height = `${heightBetween[5]}px`;
-    // line.style.height = `815px`;
   }
   if (windowCenter > numberCenters[6]) {
     line.style.height = `${heightBetween[6]}px`;
-    // line.style.height = `935px`;
   }
   if (windowCenter > numberCenters[7]) {
     line.style.height = `${heightBetween[7]}px`;
-    // line.style.height = `1080px`;
   }
   if (windowCenter > endCenter) {
     line.style.height = `${endTop - startBottom}px`;
-    // line.style.height = `150px`;
   }
 }
 
 // header 애니메이션
-// const shoePrintLeft = document.getElementById("shoe-print-left");
-// const shoePrintLeft2 = document.getElementById("shoe-print-left2");
-// const shoePrintRight = document.getElementById("shoe-print-right");
-// const shoePrintRight2 = document.getElementById("shoe-print-right2");
+const shoePrintLeft = document.getElementById("shoe-print-left");
+const shoePrintLeft2 = document.getElementById("shoe-print-left2");
+const shoePrintRight = document.getElementById("shoe-print-right");
+const shoePrintRight2 = document.getElementById("shoe-print-right2");
 
-// // setInterval(() => {
-// setTimeout(() => {
-//   shoePrintLeft.style.display = "block";
-// }, 1000);
-// setTimeout(() => {
-//   shoePrintRight.style.display = "block";
-// }, 2000);
-// setTimeout(() => {
-//   shoePrintLeft2.style.display = "block";
-// }, 3000);
-// setTimeout(() => {
-//   shoePrintRight2.style.display = "block";
-// }, 4000);
-// shoePrintLeft.style.display = "none";
-// shoePrintLeft2.style.display = "none";
-// shoePrintRight.style.display = "none";
-// shoePrintRight2.style.display = "none";
+// setInterval(() => {
+setTimeout(() => {
+  shoePrintLeft.style.display = "block";
+}, 1000);
+setTimeout(() => {
+  shoePrintRight.style.display = "block";
+}, 2000);
+setTimeout(() => {
+  shoePrintLeft2.style.display = "block";
+}, 3000);
+setTimeout(() => {
+  shoePrintRight2.style.display = "block";
+}, 4000);
+shoePrintLeft.style.display = "none";
+shoePrintLeft2.style.display = "none";
+shoePrintRight.style.display = "none";
+shoePrintRight2.style.display = "none";
 // }, 5000);
 
 const detail = document.querySelector(".detail");
