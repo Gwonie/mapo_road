@@ -9,3 +9,8 @@ footer {
 .footer-info p {
   font-family: "Cafe24SsurroundAir";
 }
+.footer a {
+  display: inline-block;
+  background-color: aqua;
+  
+}

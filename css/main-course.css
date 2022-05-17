@@ -30,11 +30,6 @@
   border-radius: 100%;
   background-color: var(--fifth-color);
 }
-.start:hover,
-.end:hover {
-  /* transform: scale(1.2);
-  transition: 0.1s ease; */
-}
 .course-name,
 .start,
 .number,
@@ -118,8 +113,8 @@
   background-color: var(--fourth-color);
 }
 .list-item .number:hover {
-  /* transform: scale(1.2);
-  transition: 0.1s ease; */
+  transform: scale(1.2);
+  transition: 0.1s ease;
 }
 
 .left-content .list-item .number {
