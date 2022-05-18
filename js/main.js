@@ -1,3 +1,14 @@
+// 주요코스 요소 절대좌표
+let startCenter = 0;
+let numberCenters = [];
+let heightBetween = [];
+let endCenter = 0;
+let endTop = 0;
+let startBottom = 0;
+
+// 주요코스 요소 절대좌표 구하는 함수 호출
+getCoordinates();
+
 // 스크롤 이벤트
 document.addEventListener("scroll", function () {
   changeNavBgColor();
@@ -60,14 +71,7 @@ function changeLinkColor() {
   }
 }
 
-// 주요코스 요소 절대좌표
-let startCenter = 0;
-let numberCenters = [];
-let heightBetween = [];
-let endCenter = 0;
-let endTop = 0;
-let startBottom = 0;
-
+// 주요코스 요소 절대좌표 구하는 함수
 function getCoordinates() {
   const numbers = document.querySelectorAll(".number");
   let numbersSorted = [];
@@ -105,8 +109,6 @@ function getCoordinates() {
     heightBetween.push(numberBottoms[i] - startBottom);
   }
 }
-
-getCoordinates();
 
 // 주요코스 수직선 변화 기능
 function changeLine() {
@@ -244,7 +246,7 @@ closeBtn.addEventListener("click", () => {
   detail.style.display = "none";
 });
 
-// When the user clicks anywhere outside of the modal, close it
+// 모달 창 밖 요소 클릭시 닫히는 기능
 window.onclick = function (event) {
   if (event.target == detail) {
     detail.style.display = "none";
