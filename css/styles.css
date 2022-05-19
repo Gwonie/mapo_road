@@ -118,7 +118,11 @@ nav ul li a:hover {
   width: 33.3vmax;
 }
 
-#shoe-print-left {
+.shoe-left {
+  position: absolute;
+}
+
+/* #shoe-print-left {
   width: 70px;
   position: absolute;
   transform: translateX(600px) rotate(20deg);
@@ -154,7 +158,7 @@ nav ul li a:hover {
   100% {
     opacity: 1;
   }
-}
+} */
 
 /* 코스소개 section CSS */
 .intro {
@@ -554,7 +558,7 @@ nav ul li a:hover {
 }
 .close-btn:hover {
   transform: scale(1.1);
-  transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out 0.15s;
 }
 .title-content {
   display: inline-block;
@@ -613,6 +617,20 @@ nav ul li a:hover {
   height: 2px;
   background-color: var(--fourth-color);
   margin-bottom: 30px;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 0.7s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* FOOTER CSS */

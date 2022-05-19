@@ -234,6 +234,15 @@ function showSlides(n) {
 
   detailImg.src = `${imgPath}${slideImg[idx]}`;
   bgImg.style.backgroundImage = `url(${imgPath}${slideImg[idx]})`;
+
+  detailImg.classList.add("fade");
+
+  detailImg.addEventListener("webkitAnimationEnd", () => {
+    detailImg.classList.remove("fade");
+  });
+  detailImg.addEventListener("animationend", () => {
+    detailImg.classList.remove("fade");
+  });
 }
 
 // 슬라이드 쇼 넘기는 함수
