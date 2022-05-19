@@ -178,39 +178,39 @@ function changeLine() {
 //   shoeRight.style.left = "210px";
 // }, 2000);
 
-// function shoeMovingEffect() {
-//   const shoeLeft = document.getElementById("shoe-left");
-//   const shoeRight = document.getElementById("shoe-right");
+function shoeMovingEffect() {
+  const shoeLeft = document.getElementById("shoe-left");
+  const shoeRight = document.getElementById("shoe-right");
 
-//   shoeLeft.style.left = `0px`;
-//   setTimeout(() => {
-//     shoeRight.style.left = `70px`;
-//   }, 500);
+  shoeLeft.style.left = `0px`;
+  setTimeout(() => {
+    shoeRight.style.left = `70px`;
+  }, 500);
 
-//   for (let i = 1; i < 15; i++) {
-//     setTimeout(() => {
-//       shoeLeft.style.left = `${140 * i}px`;
-//       shoeLeft.classList.add("shoe-effect");
-//       shoeLeft.addEventListener("webkitAnimationEnd", () => {
-//         shoeLeft.classList.remove("shoe-effect");
-//       });
-//       shoeLeft.addEventListener("animationend", () => {
-//         shoeLeft.classList.remove("shoe-effect");
-//       });
-//     }, 500 + 1000 * i);
-//     setTimeout(() => {
-//       shoeRight.style.left = `${70 + 140 * i}px`;
-//       shoeRight.classList.add("shoe-effect");
-//       shoeRight.addEventListener("webkitAnimationEnd", () => {
-//         shoeRight.classList.remove("shoe-effect");
-//       });
-//       shoeRight.addEventListener("animationend", () => {
-//         shoeRight.classList.remove("shoe-effect");
-//       });
-//       console.log(1000 + 1000 * i);
-//     }, 1000 + 1000 * i);
-//   }
-// }
+  for (let i = 1; i < 15; i++) {
+    setTimeout(() => {
+      shoeLeft.style.left = `${140 * i}px`;
+      shoeLeft.classList.add("shoe-effect");
+      shoeLeft.addEventListener("webkitAnimationEnd", () => {
+        shoeLeft.classList.remove("shoe-effect");
+      });
+      shoeLeft.addEventListener("animationend", () => {
+        shoeLeft.classList.remove("shoe-effect");
+      });
+    }, 500 + 1000 * i);
+    setTimeout(() => {
+      shoeRight.style.left = `${70 + 140 * i}px`;
+      shoeRight.classList.add("shoe-effect");
+      shoeRight.addEventListener("webkitAnimationEnd", () => {
+        shoeRight.classList.remove("shoe-effect");
+      });
+      shoeRight.addEventListener("animationend", () => {
+        shoeRight.classList.remove("shoe-effect");
+      });
+      console.log(1000 + 1000 * i);
+    }, 1000 + 1000 * i);
+  }
+}
 
 // function shoeMovingEffect2() {
 //   const shoeLeft = document.getElementById("shoe-left2");
@@ -283,7 +283,7 @@ function changeLine() {
 shoeMovingEffect();
 // setTimeout(shoeMovingEffect2, 5000);
 // setTimeout(shoeMovingEffect3, 10000);
-// setInterval(shoeMovingEffect, 15000);
+setInterval(shoeMovingEffect, 15000);
 // setInterval(shoeMovingEffect2, 20000);
 // setInterval(shoeMovingEffect3, 25000);
 

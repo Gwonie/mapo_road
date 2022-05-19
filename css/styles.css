@@ -129,46 +129,76 @@ nav ul li a:hover {
 #shoe-left {
   position: absolute;
   top: 0px;
-  left: -70px;
+  left: 0px;
   width: 70px;
-  /* animation: shoeMoving 1s; */
+  opacity: 0;
+  animation: shoeMoving 1.5s;
 }
 
 #shoe-right {
   position: absolute;
   top: 35px;
-  left: -70px;
+  left: 70px;
   width: 70px;
+  opacity: 0;
+  animation: shoeMoving 1.5s 0.5s;
 }
 
 #shoe-left2 {
   position: absolute;
   top: 0px;
-  left: -70px;
+  left: 140px;
   width: 70px;
-  /* animation: shoeMoving 1s; */
+  opacity: 0;
+  animation: shoeMoving 1.5s 1s;
 }
 
 #shoe-right2 {
   position: absolute;
   top: 35px;
-  left: -70px;
+  left: 210px;
   width: 70px;
+  opacity: 0;
+  animation: shoeMoving 1.5s 1.5s;
 }
 
 #shoe-left3 {
   position: absolute;
   top: 0px;
-  left: -70px;
+  left: 280px;
   width: 70px;
-  /* animation: shoeMoving 1s; */
+  opacity: 0;
+  animation: shoeMoving 1.5s 2s;
 }
 
 #shoe-right3 {
   position: absolute;
   top: 35px;
-  left: -70px;
+  left: 350px;
   width: 70px;
+  opacity: 0;
+  animation: shoeMoving 1.5s 2.5s;
+}
+
+#shoe-left4 {
+  position: absolute;
+  top: 0px;
+  left: 420px;
+  width: 70px;
+  opacity: 0;
+  animation: shoeMoving 1.5s 3s;
+}
+
+@keyframes shoeMoving {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
 
 /* #shoe-print-left {
@@ -205,15 +235,6 @@ nav ul li a:hover {
   animation-name: fade;
   animation-duration: 0.5s;
 }
-
-/* @keyframes shoeMoving {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
 
 /* 코스소개 section CSS */
 .intro {
