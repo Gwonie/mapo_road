@@ -1,3 +1,9 @@
+// 발자국 애니메이션 효과 함수 호출
+shoeMoving();
+setInterval(shoeMoving, 14000);
+setTimeout(pawMoving);
+setInterval(pawMoving, 14000);
+
 // 주요코스 요소 절대좌표
 let startCenter = 0;
 let numberCenters = [];
@@ -68,6 +74,84 @@ function changeLinkColor() {
   if (currentScrollValue >= recomTop) {
     console.log("도착");
     navLink[2].style.color = "#ffd365";
+  }
+}
+
+// 동물 발자국 애니메이션 효과
+function pawMoving() {
+  const pawFirst = document.getElementById("paw-first");
+  const pawSecond = document.getElementById("paw-second");
+  const pawThird = document.getElementById("paw-third");
+  const pawFourth = document.getElementById("paw-fourth");
+
+  for (let i = 0; i <= 11; i++) {
+    setTimeout(() => {
+      pawFirst.classList.add("footPrintMoving");
+      pawFirst.style.left = `${0 + 160 * i}px`;
+      pawFirst.addEventListener("animationend", () => {
+        pawFirst.classList.remove("footPrintMoving");
+      });
+    }, 0 + 1200 * i);
+    setTimeout(() => {
+      pawSecond.classList.add("footPrintMoving");
+      pawSecond.style.left = `${40 + 160 * i}px`;
+      pawSecond.addEventListener("animationend", () => {
+        pawSecond.classList.remove("footPrintMoving");
+      });
+    }, 300 + 1200 * i);
+    setTimeout(() => {
+      pawThird.classList.add("footPrintMoving");
+      pawThird.style.left = `${80 + 160 * i}px`;
+      pawThird.addEventListener("animationend", () => {
+        pawThird.classList.remove("footPrintMoving");
+      });
+    }, 600 + 1200 * i);
+    setTimeout(() => {
+      pawFourth.classList.add("footPrintMoving");
+      pawFourth.style.left = `${120 + 160 * i}px`;
+      pawFourth.addEventListener("animationend", () => {
+        pawFourth.classList.remove("footPrintMoving");
+      });
+    }, 900 + 1200 * i);
+  }
+}
+
+// 신발 발자국 애니메이션 효과
+function shoeMoving() {
+  const shoeLeft = document.getElementById("shoe-left");
+  const shoeRight = document.getElementById("shoe-right");
+  const shoeLeft2 = document.getElementById("shoe-left2");
+  const shoeRight2 = document.getElementById("shoe-right2");
+
+  for (let i = 0; i <= 6; i++) {
+    setTimeout(() => {
+      shoeLeft.classList.add("footPrintMoving");
+      shoeLeft.style.left = `${0 + 280 * i}px`;
+      shoeLeft.addEventListener("animationend", () => {
+        shoeLeft.classList.remove("footPrintMoving");
+      });
+    }, 0 + 2000 * i);
+    setTimeout(() => {
+      shoeRight.classList.add("footPrintMoving");
+      shoeRight.style.left = `${70 + 280 * i}px`;
+      shoeRight.addEventListener("animationend", () => {
+        shoeRight.classList.remove("footPrintMoving");
+      });
+    }, 500 + 2000 * i);
+    setTimeout(() => {
+      shoeLeft2.classList.add("footPrintMoving");
+      shoeLeft2.style.left = `${140 + 280 * i}px`;
+      shoeLeft2.addEventListener("animationend", () => {
+        shoeLeft2.classList.remove("footPrintMoving");
+      });
+    }, 1000 + 2000 * i);
+    setTimeout(() => {
+      shoeRight2.classList.add("footPrintMoving");
+      shoeRight2.style.left = `${210 + 280 * i}px`;
+      shoeRight2.addEventListener("animationend", () => {
+        shoeRight2.classList.remove("footPrintMoving");
+      });
+    }, 1500 + 2000 * i);
   }
 }
 
@@ -145,88 +229,6 @@ function changeLine() {
     line.style.height = `${endTop - startBottom}px`;
   }
 }
-
-function shoeMoving() {
-  const shoeLeft = document.getElementById("shoe-left");
-  const shoeRight = document.getElementById("shoe-right");
-  const shoeLeft2 = document.getElementById("shoe-left2");
-  const shoeRight2 = document.getElementById("shoe-right2");
-
-  for (let i = 0; i <= 6; i++) {
-    setTimeout(() => {
-      shoeLeft.classList.add("shoeMoving1");
-      shoeLeft.style.left = `${0 + 280 * i}px`;
-      shoeLeft.addEventListener("animationend", () => {
-        shoeLeft.classList.remove("shoeMoving1");
-      });
-    }, 0 + 2000 * i);
-    setTimeout(() => {
-      shoeRight.classList.add("shoeMoving2");
-      shoeRight.style.left = `${70 + 280 * i}px`;
-      shoeRight.addEventListener("animationend", () => {
-        shoeRight.classList.remove("shoeMoving2");
-      });
-    }, 500 + 2000 * i);
-    setTimeout(() => {
-      shoeLeft2.classList.add("shoeMoving3");
-      shoeLeft2.style.left = `${140 + 280 * i}px`;
-      shoeLeft2.addEventListener("animationend", () => {
-        shoeLeft2.classList.remove("shoeMoving3");
-      });
-    }, 1000 + 2000 * i);
-    setTimeout(() => {
-      shoeRight2.classList.add("shoeMoving4");
-      shoeRight2.style.left = `${210 + 280 * i}px`;
-      shoeRight2.addEventListener("animationend", () => {
-        shoeRight2.classList.remove("shoeMoving4");
-      });
-    }, 1500 + 2000 * i);
-  }
-}
-
-shoeMoving();
-setInterval(shoeMoving, 14000);
-
-function pawMoving() {
-  const pawFirst = document.getElementById("paw-first");
-  const pawSecond = document.getElementById("paw-second");
-  const pawThird = document.getElementById("paw-third");
-  const pawFourth = document.getElementById("paw-fourth");
-
-  for (let i = 0; i <= 11; i++) {
-    setTimeout(() => {
-      pawFirst.classList.add("shoeMoving1");
-      pawFirst.style.left = `${0 + 160 * i}px`;
-      pawFirst.addEventListener("animationend", () => {
-        pawFirst.classList.remove("shoeMoving1");
-      });
-    }, 0 + 1200 * i);
-    setTimeout(() => {
-      pawSecond.classList.add("shoeMoving2");
-      pawSecond.style.left = `${40 + 160 * i}px`;
-      pawSecond.addEventListener("animationend", () => {
-        pawSecond.classList.remove("shoeMoving2");
-      });
-    }, 300 + 1200 * i);
-    setTimeout(() => {
-      pawThird.classList.add("shoeMoving3");
-      pawThird.style.left = `${80 + 160 * i}px`;
-      pawThird.addEventListener("animationend", () => {
-        pawThird.classList.remove("shoeMoving3");
-      });
-    }, 600 + 1200 * i);
-    setTimeout(() => {
-      pawFourth.classList.add("shoeMoving4");
-      pawFourth.style.left = `${120 + 160 * i}px`;
-      pawFourth.addEventListener("animationend", () => {
-        pawFourth.classList.remove("shoeMoving4");
-      });
-    }, 900 + 1200 * i);
-  }
-}
-
-setTimeout(pawMoving);
-setInterval(pawMoving, 14000);
 
 const detail = document.querySelector(".detail");
 let slideImg = [];

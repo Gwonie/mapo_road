@@ -121,71 +121,6 @@ nav ul li a:hover {
   margin: 40px 0px;
 }
 
-.header-img img {
-  width: 33.3vmax;
-}
-
-.shoes {
-  width: 100%;
-  height: 70px;
-  position: relative;
-  background-color: var(--sixth-color);
-  overflow: hidden;
-  margin: 35px 0px;
-}
-
-#shoe-left {
-  position: absolute;
-  top: 0px;
-  left: -70px;
-  width: 70px;
-  opacity: 0;
-}
-
-.shoeMoving1 {
-  animation-name: footPrint;
-  animation-duration: 1.5s;
-}
-
-#shoe-right {
-  position: absolute;
-  top: 35px;
-  left: -70px;
-  width: 70px;
-  opacity: 0;
-}
-
-.shoeMoving2 {
-  animation-name: footPrint;
-  animation-duration: 1.5s;
-}
-
-#shoe-left2 {
-  position: absolute;
-  top: 0px;
-  left: -70px;
-  width: 70px;
-  opacity: 0;
-}
-
-.shoeMoving3 {
-  animation-name: footPrint;
-  animation-duration: 1.5s;
-}
-
-#shoe-right2 {
-  position: absolute;
-  top: 35px;
-  left: -70px;
-  width: 70px;
-  opacity: 0;
-}
-
-.shoeMoving4 {
-  animation-name: footPrint;
-  animation-duration: 1.5s;
-}
-
 #paw-first {
   position: absolute;
   top: 0px;
@@ -216,6 +151,56 @@ nav ul li a:hover {
   left: 120px;
   width: 40px;
   opacity: 0;
+}
+
+.header-img img {
+  width: 33.3vmax;
+}
+
+.shoes {
+  width: 100%;
+  height: 70px;
+  position: relative;
+  background-color: var(--sixth-color);
+  overflow: hidden;
+  margin: 35px 0px;
+}
+
+#shoe-left {
+  position: absolute;
+  top: 0px;
+  left: -70px;
+  width: 70px;
+  opacity: 0;
+}
+
+#shoe-right {
+  position: absolute;
+  top: 35px;
+  left: -70px;
+  width: 70px;
+  opacity: 0;
+}
+
+#shoe-left2 {
+  position: absolute;
+  top: 0px;
+  left: -70px;
+  width: 70px;
+  opacity: 0;
+}
+
+#shoe-right2 {
+  position: absolute;
+  top: 35px;
+  left: -70px;
+  width: 70px;
+  opacity: 0;
+}
+
+.footPrintMoving {
+  animation-name: footPrint;
+  animation-duration: 1.5s;
 }
 
 @keyframes footPrint {
