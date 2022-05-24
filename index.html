@@ -8,16 +8,16 @@
     <link rel="icon" href="/images/favicon.png" />
     <link rel="stylesheet" href="css/styles.css" />
 
-    <script defer src="js/main.js"></script>
+    <script defer="defer" src="js/main.js"></script>
     <!-- 추천스팟 상세내용 데이터 -->
-    <script defer src="js/detailData.js"></script>
+    <script defer="defer" src="js/detailData.js"></script>
     <!-- 카카오맵 관련 스크립트 -->
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=98fa6089b716be099640d2441c008b6e"
     ></script>
-    <script defer src="js/mapData.js"></script>
-    <script defer src="js/map.js"></script>
+    <script defer="defer" src="js/mapData.js"></script>
+    <script defer="defer" src="js/map.js"></script>
     <!-- fontawesome 스크립트 -->
     <script
       src="https://kit.fontawesome.com/8b24afa1f8.js"
@@ -97,23 +97,24 @@
         </div>
         <div class="horizantal-line"></div>
         <p>
-          산책이 필요한 날, <b>성미산</b>에 오른다. 마포 성산동 지명의 유래가 된
+          산책이 필요한 날,
+          <b>성미산</b>에 오른다. 마포 성산동 지명의 유래가 된
           <b>성미산(성산)</b>은 해발 66m 높이로 나지막해 가볍게 오르내리기에 딱
           적당하다.<br />
           <b>성산근린공원</b>에서 잠시 쉬었다가 내려오면, 이제부터 본격적으로
           즐길 거리를 찾을 차례.<br />
-          편안한 분위기의 아담한 <b>카페</b>, 서울의 3대 빵집이라 불리는 유명
-          <b>빵집</b>, 특색 있는 <b>서점</b> 등 성산 주변에는 소소한 재미들이 꽤
-          포진해 있다.<br />
+          편안한 분위기의 아담한
+          <b>카페</b>, 서울의 3대 빵집이라 불리는 유명 <b>빵집</b>, 특색 있는
+          <b>서점</b>
+          등 성산 주변에는 소소한 재미들이 꽤 포진해 있다.<br />
           화려한 랜드마크보다는 나만의 아지트를 소중히 여기고, 한적한
-          골목길에서도 의미를 찾을 줄 아는. 그런 당신에게 <b>성미산 동네길</b>이
-          답이다.
+          골목길에서도 의미를 찾을 줄 아는. 그런 당신에게
+          <b>성미산 동네길</b>이 답이다.
         </p>
         <div class="horizantal-line"></div>
         <div id="map"></div>
       </div>
     </div>
-    <!-- test -->
 
     <!-- 주요코스 -->
     <div id="main-course" class="main-course">
@@ -162,6 +163,9 @@
           <div class="list-item">
             <div class="number">3</div>
             <span>외주목 어린이공원</span>
+            <figure>
+              <img src="images/childrenpark.jpg" alt="" />
+            </figure>
           </div>
           <div class="list-item">
             <div class="number">5</div>
@@ -253,12 +257,12 @@
           <div class="content">
             <div class="slideshow-container">
               <img class="detail-img" alt="" />
-              <a class="prev" onclick="plusSlides(-1)"
-                ><i class="fa-solid fa-chevron-left"></i
-              ></a>
-              <a class="next" onclick="plusSlides(1)"
-                ><i class="fa-solid fa-chevron-right"></i
-              ></a>
+              <a class="prev" onclick="plusSlides(-1)">
+                <i class="fa-solid fa-chevron-left"></i>
+              </a>
+              <a class="next" onclick="plusSlides(1)">
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
             </div>
             <div class="vertical-line"></div>
             <p class="detail-info" id="detail-info"></p>
@@ -276,7 +280,8 @@
       <div class="footer-info">
         <p>
           03965 서울특별시 마포구 성산로4길 53(성산동)<br />
-          TEL) 02-3153-8555 <br />
+          TEL) 02-3153-8555
+          <br />
           created by
           <a href="https://github.com/Gwonie/mapo-myproject" target="_blank"
             >MinJiwon</a

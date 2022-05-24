@@ -62,17 +62,14 @@ function changeLinkColor() {
   navLink[2].style.color = "#ffffff";
 
   if (currentScrollValue >= introTop && currentScrollValue < mainCourseTop) {
-    console.log("도착");
     navLink[0].style.color = "#ffd365";
   }
 
   if (currentScrollValue >= mainCourseTop && currentScrollValue < recomTop) {
-    console.log("도착");
     navLink[1].style.color = "#ffd365";
   }
 
   if (currentScrollValue >= recomTop) {
-    console.log("도착");
     navLink[2].style.color = "#ffd365";
   }
 }
