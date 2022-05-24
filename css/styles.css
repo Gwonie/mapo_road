@@ -119,6 +119,7 @@ nav ul li a:hover {
   background-color: var(--sixth-color);
   overflow: hidden;
   margin: 40px 0px;
+  user-select: none;
 }
 
 #paw-first {
@@ -164,6 +165,7 @@ nav ul li a:hover {
   background-color: var(--sixth-color);
   overflow: hidden;
   margin: 35px 0px;
+  user-select: none;
 }
 
 #shoe-left {
