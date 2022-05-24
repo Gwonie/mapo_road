@@ -24,16 +24,16 @@ document.addEventListener("scroll", function () {
 
 // navbar 배경색 변화 기능
 function changeNavBgColor() {
-  const headerBottom = document
-    .querySelector("header")
-    .getBoundingClientRect().bottom;
+  const headerBottom =
+    window.pageYOffset +
+    document.querySelector("header").getBoundingClientRect().bottom;
   const nav = document.querySelector("nav");
 
   let currentScrollValue = window.pageYOffset;
 
   nav.style.backgroundColor = "rgb(33, 33, 33, 0.5)";
 
-  if (currentScrollValue < headerBottom) {
+  if (currentScrollValue <= headerBottom) {
     nav.style.backgroundColor = "#019267";
   }
 }
